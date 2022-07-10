@@ -16,6 +16,11 @@ install () {
     sudo chmod +x $appPath$binFile
 }
 
+uninstall () {
+    sudo rm -r $appPath
+    sudo rm $binFile
+}
+
 if [[ $# -eq 0 ]]; then
 	install
 elif [[ $1 == "-r" ]]; then
