@@ -2,7 +2,7 @@
 
 source config.conf
 
-install () {
+install() {
     if [[ ! -e $appPath ]]; then
         sudo mkdir $appPath
     else
@@ -16,13 +16,13 @@ install () {
     sudo chmod +x $appPath$binFile
 }
 
-uninstall () {
+uninstall() {
     sudo rm -r $appPath
     sudo rm $binFile
 }
 
 if [[ $# -eq 0 ]]; then
-	install
+    install
 elif [[ $1 == "-r" ]]; then
-	uninstall
+    uninstall
 fi
