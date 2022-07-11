@@ -1,5 +1,7 @@
 #!/bin/bash
 
+source $(echo $(dirname $(dirname $(readlink -f $0))))/config.conf
+
 showError() {
     echo $1
     exit 1
