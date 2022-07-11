@@ -12,7 +12,7 @@ if [[ $# -eq 0 ]]; then
     exit 0
 elif [[ $# -eq 2 ]]; then
     if [[ -e $appPath/corners/$1.sh ]]; then
-        echo "ok"
+        echo $2 > $appPath/corners/$1.sh
     else
         showError "Defined corner not found"
     fi
