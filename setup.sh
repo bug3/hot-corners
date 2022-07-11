@@ -13,9 +13,10 @@ install() {
     desktop-file-edit --set-key="Exec" --set-value=$appPath/controller.sh hot-corners.desktop
     
     sudo cp -r * $appPath
-
     sudo ln -s $appPath$binFile $binFile
+    
     sudo chmod +x $appPath$binFile
+    sudo chmod -R 777 $appPath/corners/*
 }
 
 uninstall() {
