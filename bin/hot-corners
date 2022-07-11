@@ -4,3 +4,12 @@ showError() {
     echo $1
     exit 1
 }
+
+if [[ $# -eq 0 ]]; then
+    echo "Usage: hot-corners [corner] [script]"
+    exit 0
+elif [[ $# -eq 2 ]]; then
+    
+else
+    showError "Wrong number of args"
+fi
