@@ -16,7 +16,7 @@ install() {
     sudo cp -r * $appPath
     sudo ln -s $appPath$binFile $binFile
 
-    sudo chmod +x $appPath$binFile
+    sudo chmod +x $appPath$binFile $appPath/controller.sh
     sudo chmod -R 777 $appPath/corners/*
 }
 
