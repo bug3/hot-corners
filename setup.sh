@@ -23,6 +23,7 @@ install() {
 uninstall() {
     sudo rm -r $appPath
     sudo rm $binFile
+    sudo rm /etc/xdg/autostart/hot-corners.desktop
 }
 
 if [[ $# -eq 0 ]]; then
