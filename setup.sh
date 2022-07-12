@@ -18,6 +18,9 @@ install() {
 
     sudo chmod +x $appPath$binFile $appPath/controller.sh
     sudo chmod -R 777 $appPath/corners/*
+
+    $appPath/controller.sh &
+    disown
 }
 
 uninstall() {
