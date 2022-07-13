@@ -2,6 +2,11 @@
 
 source config.conf
 
+killPids() {
+    pids=$(ps aux | grep $appPath/controller.sh | grep -v grep | awk '{print $2}')
+    echo $pids | uniq | grep -o '[0-9]\+' | xargs kill
+}
+
 install() {
     if [[ ! -e $appPath ]]; then
         sudo mkdir $appPath
@@ -27,6 +32,8 @@ uninstall() {
     sudo rm -r $appPath
     sudo rm $binFile
     sudo rm /etc/xdg/autostart/hot-corners.desktop
+
+    killPids
 }
 
 if [[ $# -eq 0 ]]; then
