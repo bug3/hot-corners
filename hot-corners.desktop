@@ -6,3 +6,4 @@ Terminal=false
 Type=Application
 StartupNotify=false
 X-GNOME-Autostart-enabled=true
+X-Desktop-File-Install-Version=0.26
