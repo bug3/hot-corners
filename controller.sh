@@ -28,6 +28,4 @@ while true; do
     else
         lastCorner="none"
     fi
-
-    sleep $controlDelay
 done
