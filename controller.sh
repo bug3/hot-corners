@@ -28,4 +28,6 @@ while true; do
     else
         lastCorner="none"
     fi
+
+    sudo cat /dev/input/mice | :
 done
