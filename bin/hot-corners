@@ -2,7 +2,7 @@
 
 source $(echo $(dirname $(dirname $(readlink -f $0))))/config.conf
 
-showError() {
+errorMessage() {
     echo $1
     exit 1
 }
@@ -14,8 +14,8 @@ elif [[ $# -eq 2 ]]; then
     if [[ -e $appPath/corners/$1.sh ]]; then
         echo $2 > $appPath/corners/$1.sh
     else
-        showError "Defined corner not found"
+        errorMessage "Defined corner not found"
     fi
 else
-    showError "Wrong number of args"
+    errorMessage "Wrong number of args"
 fi
