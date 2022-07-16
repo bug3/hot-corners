@@ -6,6 +6,11 @@ lastCorner="none"
 cSize=$((cornerSize + 1))
 displayWidth=$(xdotool getdisplaygeometry | awk '{ print $1 }')
 displayHeight=$(xdotool getdisplaygeometry | awk '{ print $2 }')
+processCount=$(ps aux | grep $(realpath $0) | wc -l)
+
+if [[ $processCount -gt 3 ]]; then
+    exit 0
+fi
 
 execCornerScript() {
     if [[ $lastCorner != $1 ]]; then
