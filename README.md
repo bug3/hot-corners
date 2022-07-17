@@ -15,13 +15,13 @@ or quickly download and setup as below.
 -   [curl](https://curl.se):
 
     ```bash
-    bash <(curl -sL dar.vin/install) bug3 ant
+    bash <(curl -sL dar.vin/install) bug3 hot-corners
     ```
 
 -   [wget](https://www.gnu.org/software/wget):
 
     ```bash
-    bash <(wget -qO- dar.vin/install) bug3 ant
+    bash <(wget -qO- dar.vin/install) bug3 hot-corners
     ```
 
 ## Uninstall
