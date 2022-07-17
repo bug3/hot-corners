@@ -28,6 +28,18 @@ or quickly download and setup as below.
 
 Add the -r parameter to the end of the installation [code](https://github.com/bug3/installer/blob/master/USAGE.md)
 
+## Usage
+
+```bash
+hot-corners [corner] [script]
+```
+
+-   e.g.
+
+    ```bash
+    hot-corners top-left "xmessage test"
+    ```
+
 ## License
 
 [MIT](https://choosealicense.com/licenses/mit/)
