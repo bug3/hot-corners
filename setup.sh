@@ -31,6 +31,8 @@ install() {
 }
 
 uninstall() {
+    sudo systemctl stop hot-corners.service
+
     sudo rm -r $appPath
     sudo rm $binFile
     sudo rm $serviceFile
