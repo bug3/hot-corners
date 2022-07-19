@@ -2,6 +2,12 @@
 
 source config.conf
 
+editServiceFile() {
+    sed -i "s|ExecStart=.*|ExecStart=$appPath/controller.sh|" $serviceFile
+    sed -i "s|DISPLAY=|DISPLAY=$DISPLAY|" $serviceFile
+    sed -i "s|XAUTHORITY=|XAUTHORITY=$XAUTHORITY|" $serviceFile
+}
+
 install() {
     if [[ ! -e $appPath ]]; then
         sudo mkdir $appPath
