@@ -16,6 +16,8 @@ install() {
         exit 1
     fi
 
+    editServiceFile
+
     sudo cp -r * $appPath
     sudo ln -s $appPath$binFile $binFile
 
