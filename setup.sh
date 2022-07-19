@@ -35,7 +35,7 @@ uninstall() {
 
     sudo rm -r $appPath
     sudo rm $binFile
-    sudo rm $serviceFile
+    sudo rm /etc/systemd/system/$serviceFile
 
     sudo systemctl daemon-reload
 }
