@@ -33,6 +33,7 @@ install() {
 uninstall() {
     sudo rm -r $appPath
     sudo rm $binFile
+    sudo rm $serviceFile
 }
 
 if [[ $# -eq 0 ]]; then
