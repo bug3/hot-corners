@@ -24,6 +24,10 @@ install() {
 
     sudo chmod +x $appPath$binFile $appPath/controller.sh
     sudo chmod -R 777 $appPath/corners/*
+
+    sudo systemctl daemon-reload
+    sudo systemctl enable hot-corners.service
+    sudo systemctl start hot-corners.service
 }
 
 uninstall() {
