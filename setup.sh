@@ -36,6 +36,8 @@ uninstall() {
     sudo rm -r $appPath
     sudo rm $binFile
     sudo rm $serviceFile
+
+    sudo systemctl daemon-reload
 }
 
 if [[ $# -eq 0 ]]; then
