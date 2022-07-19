@@ -18,6 +18,7 @@ install() {
 
     editServiceFile
 
+    sudo cp $serviceFile /etc/systemd/system
     sudo cp -r * $appPath
     sudo ln -s $appPath$binFile $binFile
 
