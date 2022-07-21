@@ -4,8 +4,6 @@ source $(dirname $(realpath $0))/config.conf
 
 lastCorner="none"
 cSize=$((cornerSize + 1))
-displayWidth=$(xdotool getdisplaygeometry | awk '{ print $1 }')
-displayHeight=$(xdotool getdisplaygeometry | awk '{ print $2 }')
 
 execCornerScript() {
     if [[ $lastCorner != $1 ]]; then
@@ -15,6 +13,9 @@ execCornerScript() {
 }
 
 while true; do
+    displayWidth=$(xdotool getdisplaygeometry | awk '{ print $1 }')
+    displayHeight=$(xdotool getdisplaygeometry | awk '{ print $2 }')
+
     eval $(xdotool getmouselocation --shell)
 
     if [[ $X -lt $((cSize - 1)) && $Y -lt $((cSize - 1)) ]]; then
