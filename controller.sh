@@ -13,8 +13,9 @@ execCornerScript() {
 }
 
 while true; do
-    displayWidth=$(xdotool getdisplaygeometry | awk '{ print $1 }')
-    displayHeight=$(xdotool getdisplaygeometry | awk '{ print $2 }')
+    dimensions=$(xdotool getdisplaygeometry)
+    displayWidth=$(echo $dimensions | awk '{ print $1 }')
+    displayHeight=$(echo $dimensions | awk '{ print $2 }')
 
     eval $(xdotool getmouselocation --shell)
 
