@@ -31,5 +31,5 @@ while true; do
         lastCorner="none"
     fi
 
-    sudo cat /dev/input/mice | :
+    sleep 0.3
 done
